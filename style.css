@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 ::selection{
     background-color: black;
@@ -9,4 +10,11 @@
 }
 body{
     background-color: #0C0B0B;
+}
+header{
+    height: 100vh;
+    background-image: url(./Img/prep-food.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter:brightness(60%);
 }
