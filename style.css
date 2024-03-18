@@ -41,7 +41,7 @@ header::before{
     left: 0;
     width: 100vw;
     height: 100%;
-    background: url(./Img/prep-food.jpg);
+    background: url(./Img/prep-food.webp);
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(30%);
@@ -380,3 +380,8 @@ main .product .product-card-container img{
 .gallery .slider:hover .img-slider{
     animation-play-state: paused;
 }
+
+
+
+
+
