@@ -377,8 +377,6 @@ main .product .product-card-container img{
     }
     
 }
-
 .gallery .slider:hover .img-slider{
     animation-play-state: paused;
 }
-
