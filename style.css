@@ -381,7 +381,71 @@ main .product .product-card-container img{
     animation-play-state: paused;
 }
 
+/* Style for the food-tales container */
 
 
+.slider-food {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust this value as needed */
+    margin: 0 auto;
+  }
+  
+  .slider-food-img {
+    position: relative;
+  }
+  
+  .slide {
+    display: none;
+  }
 
+  
+  .slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Show the selected slide */
+  input[type="radio"]:checked + .slider-controls label {
+    background-color: #ccc; /* Change background color of selected radio button */
+  }
+  
+  #slide1:checked ~ .slider-food-img .slide1,
+  #slide2:checked ~ .slider-food-img .slide2,
+  #slide3:checked ~ .slider-food-img .slide3,
+  #slide4:checked ~ .slider-food-img .slide4 {
+    display: block; /* Show the corresponding slide when its radio button is checked */
+  }
+  
+  #slide1:checked ~  img,
+  #slide2:checked ~  img,
+  #slide3:checked ~  img,
+  #slide4:checked ~  img{
+    display: block; /* Show the corresponding slide when its radio button is checked */
+  }
 
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .slider-controls input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+  }
+  
+  .slider-controls label {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px; /* Adjust the gap between radio buttons */
+  }
+  
+  .slider-controls label:hover {
+    background-color: #ddd; /* Change background color of radio button on hover */
+  }
+  
