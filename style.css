@@ -359,11 +359,10 @@ main .product .product-card-container img{
     height: 500px;
     border-radius: 10px;
     transform: scale(0.9);
-    transition: transform 0.5s ease-in-out;
 }
 .gallery .img-slider{
     display: inline-block;
-    animation: loop 20s linear infinite;
+    animation: loop 60s linear infinite;
 }
 
 .gallery .slider{
@@ -457,6 +456,8 @@ main .product .product-card-container img{
     background-color: var(--color);
     transition: 0.2s ease-out;
 }
+
+/* Back TO Top */
 .back-to-top span{
     font-size: 3.5rem;
     padding: 0.2em;
