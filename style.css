@@ -384,28 +384,40 @@ main .product .product-card-container img{
 }
 
 /* Style for the food-tales container */
+
 .img-slide {
     position: relative;
     height: 400px;
   }
   
   .img-radio {
-    display: none;
+    /* display: none; */
   }
   
   .img-label {
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
   }
-  
+  .img-label .img-containe{
+    width: 50%;
+    height: 100%;
+  }
+  .img-label .text{
+    width: 50%;
+    font-size: 3rem;
+  }
+
   .img-switch {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.8s ease;
   }
   
   .img-radio:checked + .img-label .img-switch {
@@ -426,22 +438,28 @@ main .product .product-card-container img{
   }
   
   .img-nav-item {
-    width: 10px;
-    height: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 0 5px;
     cursor: pointer;
   }
-  
-  .img-radio:checked + .img-label ~ .img-nav .img-nav-item:first-child {
-    background-color: #f00;
+
+  .img-nav-item:Hover{
+    background-color: red;
   }
   
-  .img-radio:checked:nth-child(2) + .img-label ~ .img-nav .img-nav-item:nth-child(2) {
-    background-color: #f00;
-  }
-  
+  .text {
+    display: none;
+}
+  .img-radio:checked + .foodimg.text {
+    display: block;
+}
+
+
+
 
 /* arrow up */
 .back-to-top{
