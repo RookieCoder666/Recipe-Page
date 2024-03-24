@@ -391,7 +391,7 @@ main .product .product-card-container img{
   }
   
   .img-radio {
-    /* display: none; */
+    display: none;
   }
   
   .img-label {
@@ -428,6 +428,14 @@ main .product .product-card-container img{
     opacity: 0;
   }
   
+  .img-radio:checked + .img-label .text{
+    opacity: 1;
+  }
+
+  .img-radio:not(:checked) + .img-label .text {
+    opacity: 0;
+  }
+  
   .img-nav {
     position: absolute;
     bottom: 10px;
@@ -451,15 +459,12 @@ main .product .product-card-container img{
     background-color: red;
   }
   
-  .text {
+  /* .text {
     display: none;
 }
   .img-radio:checked + .foodimg.text {
     display: block;
-}
-
-
-
+} */
 
 /* arrow up */
 .back-to-top{
