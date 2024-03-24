@@ -387,7 +387,7 @@ main .product .product-card-container img{
 
 .img-slide {
     position: relative;
-    height: 400px;
+    height: 500px;
   }
   
   .img-radio {
@@ -498,6 +498,14 @@ main .product .product-card-container img{
     border-radius: 5px;
     background-color: var(--color);
     transition: 0.2s ease-out;
+}
+
+
+footer{
+    background: var(--color);
+    height: 200px;
+    font-size: 3rem;
+    border-radius: 15px 15px 0 0;
 }
 
 /* Back TO Top */
