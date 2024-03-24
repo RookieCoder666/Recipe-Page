@@ -458,13 +458,7 @@ main .product .product-card-container img{
   .img-nav-item:Hover{
     background-color: red;
   }
-  
-  /* .text {
-    display: none;
-}
-  .img-radio:checked + .foodimg.text {
-    display: block;
-} */
+
 
 /* arrow up */
 .back-to-top{
