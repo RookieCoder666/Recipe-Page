@@ -507,6 +507,12 @@ footer{
     font-size: 3rem;
     border-radius: 15px 15px 0 0;
 }
+footer .footer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 /* Back TO Top */
 .back-to-top span{
