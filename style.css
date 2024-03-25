@@ -545,9 +545,13 @@ footer .get-in-touch img{
     width: 40px;
     height: 40px;
     padding: 5px 5px;
+    transition: transform 0.5s ease-in-out;
 }
 footer .get-in-touch{
     text-align: center;
+}
+footer .get-in-touch img:hover{
+    transform: scale(1.1);
 }
 /* Back TO Top */
 
