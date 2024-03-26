@@ -82,7 +82,7 @@ header .nav-container .logo span {
 header .nav-container .logo h3 {
     align-self: end;
 }
-/* Other header styles... */
+
 
 
 /* Styling for all elements containing <span> tags */
@@ -290,6 +290,25 @@ main .popular-recipes .card-p {
     padding-top: 0.5em;
 }
 
+main .popular-recipes .card1{
+    width: 500px;
+    max-height: 320px;
+    background-color: var(--color);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+main .card1:hover{
+    max-height: 500px;
+}
+main .card1:hover .card-body{
+    /* visibility: visible; */
+    opacity: 1;
+    transition-delay: 0.5ms;
+}
+main .card1 a{
+    text-decoration: none;
+}
+
 /* Styling for product section */
 main .product {
     margin: 2em 0;
@@ -427,6 +446,8 @@ main .product .product-card-container img {
     animation-play-state: paused;
 }
 
+
+
 /* Styling for the food-tales container */
 
 /* Styling for the image slide */
@@ -459,6 +480,11 @@ main .product .product-card-container img {
     object-fit: contain;
 }
 
+.img-label .img-containe{
+    width: 50%;
+    height: 100%;
+  }
+  
 /* Styling for the text container */
 .img-label .text {
     width: 50%;
