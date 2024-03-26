@@ -1,45 +1,50 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Passero+One&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Kode+Mono:wght@400..700&display=swap');
 
-
-*{
+/* Resetting default styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 62.5%;
-}
-:root{
-    --font-main:"Quantico", sans-serif;
-    --font:"Passero One", sans-serif;
-    --font1:"Kode Mono", monospace;
-    --font2:"Finger Paint", sans-serif;
-    --main-color:#FF0000;
-    --second-color:#FF004D;
-    --button-color:#C50808;
-    --button-hover-color:#e51e1e;
-    --color:#E8A6A6;
-}
-html{
-    scroll-behavior: smooth;
+    font-size: 62.5%; /* Setting base font size to 10px */
 }
 
-body{
-    background-color: #0c0b0b;
-    color: white;
-    overflow-x:hidden;
+/* CSS Variables */
+:root {
+    --font-main: "Quantico", sans-serif; /* Main font family */
+    --font: "Passero One", sans-serif; /* Secondary font family */
+    --font1: "Kode Mono", monospace; /* Tertiary font family */
+    --font2: "Finger Paint", sans-serif; /* Quaternary font family */
+    --main-color: #FF0000; /* Main color */
+    --second-color: #FF004D; /* Secondary color */
+    --button-color: #C50808; /* Button color */
+    --button-hover-color: #e51e1e; /* Button hover color */
+    --color: #E8A6A6; /* Additional color */
 }
-/* Desktop First Approch */
 
-/* Header */
+/* General styles */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+body {
+    background-color: #0c0b0b; /* Background color */
+    color: white; /* Default text color */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Header styles */
 header {
     position: relative;
-    height: 100vh;
-    text-transform: capitalize;
-
+    height: 100vh; /* Full viewport height */
+    text-transform: capitalize; /* Capitalize text */
 }
-header::before{
+
+/* Header background */
+header::before {
     content: " ";
-    position: absolute ;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -47,13 +52,12 @@ header::before{
     background: url(./Img/prep-food.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(30%);
+    filter: brightness(30%); /* Adjust background brightness */
     z-index: -1;
 }
 
-/* Header Nav Section */
-
-header .nav-container{
+/* Header navigation container */
+header .nav-container {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -62,39 +66,44 @@ header .nav-container{
     right: 5%;
 }
 
-/* Edit Logo */
-header .nav-container .logo{
+/* Logo styles */
+header .nav-container .logo {
     display: flex;
     gap: 10px;
     font-family: var(--font-main);
 }
-header .nav-container img{
+header .nav-container img {
     width: 35px;
 }
-header .nav-container .logo h3 , header .nav-container .logo span{
+header .nav-container .logo h3,
+header .nav-container .logo span {
     font-size: 2.5rem;
 }
-header .nav-container .logo h3{
-    align-self: end;   
+header .nav-container .logo h3 {
+    align-self: end;
+}
+/* Other header styles... */
+
+
+/* Styling for all elements containing <span> tags */
+span {
+    color: var(--main-color); /* Set color using CSS variable */
 }
 
-/* For All Element contain Span Tag */
-span{
-    color: var(--main-color);
-}
-
-/* Edit-Nav-bar */
-header .nav-container nav{
+/* Navigation bar styling */
+header .nav-container nav {
     display: flex;
 }
-header .nav-container a{
+
+header .nav-container a {
     font-size: 3rem;
     font-family: var(--font);
     color: white;
     text-decoration: none;
     margin: 0em 0.6em;
 }
-header .nav-container nav a::after{
+
+header .nav-container nav a::after {
     content: "";
     display: block;
     width: 0%;
@@ -102,87 +111,97 @@ header .nav-container nav a::after{
     background-color: var(--button-hover-color);
     transition: all 0.5s ease-in-out;
 }
-header .nav-container nav a:hover::after{
+
+header .nav-container nav a:hover::after {
     width: 100%;
     margin: 0 auto;
 }
 
-/* for all Element contain class of button */
-.button{
+/* Button styling */
+.button {
     display: inline-block;
     background: var(--button-color);
     border-radius: 2px;
     transition: all 0.5s ease-in-out;
 }
-.button a{
+
+.button a {
     font-size: 2.4rem;
     font-family: var(--font);
-    color: white ;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0 0.2em;
 }
-.button:hover{
-    background:var(--button-hover-color) ;
+
+.button:hover {
+    background: var(--button-hover-color);
 }
 
-/* Header content */
-
-header .header-content{
+/* Header content styling */
+header .header-content {
     position: absolute;
     top: 35%;
     left: 5%;
     right: 5%;
     font-family: var(--font-main);
 }
-header .header-content h1{
+
+header .header-content h1 {
     font-size: 5rem;
 }
-header .header-content span{
+
+header .header-content span {
     font-size: 5rem;
 }
-header .header-content p{
+
+header .header-content p {
     font-size: 2rem;
     font-style: italic;
     padding-top: 0.5em;
     padding-bottom: 0.8em;
 }
 
-/* Main contant */
-main{
+/* Main content styling */
+main {
     font-family: var(--font-main);
     text-transform: capitalize;
     margin: 5em 24em;
 }
-main h2{
+
+main h2 {
     font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
 }
 
-main .img-container img{
+/* Styling for image containers */
+main .img-container img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    transition:0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
-main .img-container img:hover{
-    filter:drop-shadow(0 0 2.5rem var(--color));
+
+main .img-container img:hover {
+    filter: drop-shadow(0 0 2.5rem var(--color));
     transform: rotate(360deg);
 }
-main .img-container a{
+
+main .img-container a {
     text-decoration: none;
     color: white;
 }
 
-main .img-container p{
+main .img-container p {
     font-size: 2.2rem;
     text-align: center;
     text-decoration: none;
     padding-top: 1em;
 }
-main .img-container{
+
+main .img-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -190,211 +209,239 @@ main .img-container{
     margin: 20em 0em;
 }
 
-main .about-us{
+/* Styling for the 'About Us' section */
+main .about-us {
     display: flex;
     justify-content: space-between;
     gap: 50px;
     margin: 45em 0;
 }
-main .about-us img{
+
+
+/* Styling for images in the 'About Us' section */
+main .about-us img {
     width: 480px;
-    height:580px;
+    height: 580px;
     border-radius: 50px;
     object-fit: cover;
     transition: 0.5s ease-in-out;
 }
-main .about-us img:hover{
-    transform: scale(1.1);
-    filter:drop-shadow(0 0 2.5rem var(--color));
 
+main .about-us img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 2.5rem var(--color));
 }
-main .about-us h3 a{
+
+/* Styling for headings and paragraphs in the 'About Us' section */
+main .about-us h3 a {
     font-size: 5rem;
     color: var(--second-color);
     text-decoration: none;
-
 }
-main .about-us p , main .about-us span{
+
+main .about-us p,
+main .about-us span {
     font-size: 3.2rem;
 }
 
-/* popular Recipes card Style */
-
-main .popular-recipes .card-container{
+/* Styling for popular recipes card container */
+main .popular-recipes .card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 70px;
     text-align: center;
-    margin-top: 100em;
+    margin-top: 100em; /* This margin seems too large, check if it's intended */
 }
-main .popular-recipes .card-container img{
+
+/* Styling for images in popular recipes cards */
+main .popular-recipes .card-container img {
     width: 400px;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
     position: relative;
-    top: -15%;
+    top: -15%; /* Consider removing this, as it might affect the layout */
 }
-main .popular-recipes .card-body{
+
+/* Styling for the body of popular recipes cards */
+main .popular-recipes .card-body {
     color: rgb(0, 0, 0);
     font-family: var(--font-main);
     font-weight: 600;
     position: relative;
     top: -12%;
-    /* visibility: hidden; */
     opacity: 0;
-    transition: opacity 0.3s ease-out
+    transition: opacity 0.3s ease-out;
 }
-main .popular-recipes h3{
+
+/* Styling for headings in popular recipes cards */
+main .popular-recipes h3 {
     font-size: 2.5rem;
     font-family: var(--font2);
 }
-main .popular-recipes .card-p{
+
+/* Styling for paragraphs in popular recipes cards */
+main .popular-recipes .card-p {
     font-size: 2rem;
     font-family: var(--font1);
     font-weight: 700;
     letter-spacing: 1px;
     padding-top: 0.5em;
 }
-main .popular-recipes .card1{
-    width: 500px;
-    max-height: 320px;
-    background-color: var(--color);
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
-}
-main .card1:hover{
-    max-height: 500px;
-}
-main .card1:hover .card-body{
-    /* visibility: visible; */
-    opacity: 1;
-    transition-delay: 0.5ms;
-}
-main .card1 a{
-    text-decoration: none;
-}
 
-main .product{
+/* Styling for product section */
+main .product {
     margin: 2em 0;
     font-size: 3rem;
     color: white;
 }
-main  h2 a{
+
+/* Styling for headings in product section */
+main h2 a {
     font-size: 3.5rem;
     text-decoration: none;
     color: white;
 }
-main .product .product-card-container img{
+
+/* Styling for images in product cards */
+main .product .product-card-container img {
     width: 500px;
     height: 550px;
     object-fit: cover;
     border-radius: 10px;
 }
-.product .product-card-container{
+
+/* Styling for product card container */
+.product .product-card-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 70px;
 }
-.product .card2{
+
+/* Styling for the card wrapper within the product section */
+.product .card2 {
     position: relative;
     overflow: hidden;
 }
-.product .card-body{
+
+/* Styling for the card body within the product section */
+.product .card-body {
     width: 100%;
     height: 100%;
     font-family: var(--font-main);
     position: absolute;
     top: 0;
-    right: -100%;
+    right: -100%; /* Initially hidden off the screen */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #00000044;
-    backdrop-filter: blur(10px);
+    background: #00000044; /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurred background effect */
     border-radius: 10px;
     padding: 0 2em;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out; /* Smooth transition effect */
 }
-.product .card2:hover .card-body{
-    right: 0;
-}
-.product .card-body h4{
+
+/* Styling for headings within the card body */
+.product .card-body h4 {
     font-size: 3.5rem;
     text-transform: uppercase;
     margin: 15px 0;
 }
-.product .card-body p{
+
+/* Styling for paragraphs within the card body */
+.product .card-body p {
     font-size: 2.2rem;
     margin: 5px 0 20px;
 }
-.product .card-body button{
+
+/* Styling for buttons within the card body */
+.product .card-body button {
     font-size: 2rem;
     font-family: var(--font-main);
     padding: 0.1em 1em;
     width: 150px;
 }
 
+/* Transition effect for revealing the card body on hover */
+.product .card2:hover .card-body {
+    right: 0; /* Revealing the card body by moving it to the right */
+}
 
 
-.gallery .slider-container .img{
+
+
+/* Styling for the slider container within the gallery */
+.gallery .slider-container .img {
     display: flex;
     align-items: center;
     width: 500px;
     height: 400px;
-    perspective: 100px;
+    perspective: 100px; /* Adding perspective for 3D effect */
 }
-.gallery img{
+
+/* Styling for images within the gallery */
+.gallery img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 1s;
+    object-fit: cover; /* Ensuring images cover the container */
+    transition: transform 1s; /* Adding a transition effect for smooth transformation */
 }
 
-.gallery .slider img{
-    width: 550px;
-    height: 500px;
-    border-radius: 10px;
-    transform: scale(0.9);
+/* Styling for images within the slider */
+.gallery .slider img {
+    width: 550px; /* Adjusting width for styling */
+    height: 500px; /* Adjusting height for styling */
+    border-radius: 10px; /* Adding border radius */
+    transform: scale(0.9); /* Initial scaling effect */
 }
-.gallery .img-slider{
+
+/* Animation for sliding images */
+.gallery .img-slider {
     display: inline-block;
-    animation: loop 60s linear infinite;
+    animation: loop 60s linear infinite; /* Applying looping animation */
 }
 
-.gallery .slider{
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
+/* Styling for the slider */
+.gallery .slider {
+    overflow: hidden; /* Hiding overflow */
+    white-space: nowrap; /* Preventing wrapping */
+    position: relative; /* Positioning */
 }
+
+/* Keyframes for the sliding animation */
 @keyframes loop {
-    from{
-        transform: translateX(0);
+    from {
+        transform: translateX(0); /* Starting position */
     }
-    to{
-        transform: translateX(-100%);
+    to {
+        transform: translateX(-100%); /* Ending position */
     }
-    
 }
-.gallery .slider:hover .img-slider{
+
+/* Pausing animation on hover */
+.gallery .slider:hover .img-slider {
     animation-play-state: paused;
 }
 
-/* Style for the food-tales container */
+/* Styling for the food-tales container */
 
+/* Styling for the image slide */
 .img-slide {
     position: relative;
     height: 500px;
-  }
-  
-  .img-radio {
+}
+
+/* Styling for radio buttons (hidden) */
+.img-radio {
     display: none;
-  }
-  
-  .img-label {
+}
+
+/* Styling for the label */
+.img-label {
     position: absolute;
     top: 0;
     left: 0;
@@ -403,42 +450,53 @@ main .product .product-card-container img{
     align-items: center;
     width: 100%;
     height: 100%;
-  }
-  .img-label .img-containe{
+}
+
+/* Styling for the image container */
+.img-label .img-container {
     width: 50%;
     height: 100%;
-  }
-  .img-label .text{
+    object-fit: contain;
+}
+
+/* Styling for the text container */
+.img-label .text {
     width: 50%;
     height: 100%;
     font-size: 3rem;
-  }
+}
 
-  .img-switch {
+/* Styling for the image switch */
+.img-switch {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: opacity 0.8s ease;
-  }
-  
-  .img-radio:checked + .img-label .img-switch {
+}
+
+/* Styling for checked radio buttons */
+.img-radio:checked + .img-label .img-switch {
     opacity: 1;
     color: blue;
-  }
-  
-  .img-radio:not(:checked) + .img-label .img-switch {
-    opacity: 0;
-  }
-  
-  .img-radio:checked + .img-label .text{
-    opacity: 1;
-  }
+}
 
-  .img-radio:not(:checked) + .img-label .text {
+/* Styling for unchecked radio buttons */
+.img-radio:not(:checked) + .img-label .img-switch {
     opacity: 0;
-  }
-  
-  .foodimg .text{
+}
+
+/* Styling for checked radio buttons and associated text */
+.img-radio:checked + .img-label .text {
+    opacity: 1;
+}
+
+/* Styling for unchecked radio buttons and associated text */
+.img-radio:not(:checked) + .img-label .text {
+    opacity: 0;
+}
+
+/* Styling for the text container within foodimg */
+.foodimg .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,31 +504,29 @@ main .product .product-card-container img{
     transition: opacity 0.2s ease;
 }
 
-.img-radio:checked + .img-label .text{
-    opacity: 1;
-  }
-
-  .img-radio:not(:checked) + .img-label .text {
-    opacity: 0;
-  }
-.foodimg .text h1{
+/* Styling for heading within the text container */
+.foodimg .text h1 {
     font-size: 3rem;
     margin-bottom: 1em;
 }
-.foodimg .text p{
+
+/* Styling for paragraph within the text container */
+.foodimg .text p {
     font-size: 2rem;
 }
 
-  .img-nav {
+/* Styling for navigation items */
+.img-nav {
     position: absolute;
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-  }
-  
-  .img-nav-item {
+}
+
+/* Styling for individual navigation items */
+.img-nav-item {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -478,107 +534,136 @@ main .product .product-card-container img{
     background-color: #ccc;
     margin: 0 5px;
     cursor: pointer;
-  }
-
-  .img-nav-item:Hover{
-      background-color: red;
 }
 
-
-footer{
-    background: var(--color);
-    font-family: var(--font-main);
-    color: black;
-    font-weight: 700;
-    border-radius: 50px 50px 0 0;
-    text-transform: uppercase;
-}
-footer .footer-container .row{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    font-size: 2rem;
-    padding-top: 20px;
-}
-footer .footer-container .row .info{
-    width: 50%;
-}
-footer .footer-container .row p{
-    font-size: 2.5rem;
-}
-footer .footer-container .row span{
-    font-size: inherit;
+/* Styling for hover effect on navigation items */
+.img-nav-item:hover {
+    background-color: red;
 }
 
-footer .footer-container .row h5{
-    font-size: 3rem;
+
+
+
+/* Styling for the footer */
+footer {
+    background: var(--color); /* Background color */
+    font-family: var(--font-main); /* Font family */
+    color: black; /* Text color */
+    font-weight: 700; /* Font weight */
+    border-radius: 50px 50px 0 0; /* Border radius */
+    text-transform: uppercase; /* Uppercase text */
 }
 
-footer .top-links , footer .quick-links{
-    display: flex;
-    flex-direction: column;
+/* Styling for the rows in the footer container */
+footer .footer-container .row {
+    display: flex; /* Flex display */
+    justify-content: center; /* Center align content */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 50px; /* Gap between elements */
+    font-size: 2rem; /* Font size */
+    padding-top: 20px; /* Top padding */
 }
 
-footer a{
-    text-decoration: none;
-    font-size: 2rem;
-    color: black;
-    text-transform: uppercase;
+/* Styling for the info section in the footer */
+footer .footer-container .row .info {
+    width: 50%; /* Width */
 }
 
-footer .add-info{
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: 10px;
-}
-footer .hr-line:before{
-    content: "";
-    width: 80%;
-    height: 3px;
-    display: block;
-    background-color: black;
-    margin: 20px auto;
+/* Styling for paragraphs in the footer */
+footer .footer-container .row p {
+    font-size: 2.5rem; /* Font size */
 }
 
-footer .get-in-touch img{
-    width: 40px;
-    height: 40px;
-    padding: 5px 5px;
-    transition: transform 0.5s ease-in-out;
-}
-footer .get-in-touch{
-    text-align: center;
-}
-footer .get-in-touch img:hover{
-    transform: scale(1.1);
-}
-/* Back TO Top */
-
-/* arrow up */
-.back-to-top{
-    position: fixed;
-    bottom: 5rem;
-    right: 2rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    background-color: var(--color);
-    transition: 0.2s ease-out;
-}
-.back-to-top span{
-    font-size: 3.5rem;
-    padding: 0.2em;
-    color: black;
-    font-weight: 800;
-    transition: 0.2s ease-out;
+/* Styling for spans in the footer */
+footer .footer-container .row span {
+    font-size: inherit; /* Inherit font size */
 }
 
-.back-to-top:hover{
-    background:var(--button-hover-color) ;
+/* Styling for headings in the footer */
+footer .footer-container .row h5 {
+    font-size: 3rem; /* Font size */
 }
-.back-to-top span:hover{
-    transform: translateY(-2px);
+
+/* Styling for top-links and quick-links in the footer */
+footer .top-links,
+footer .quick-links {
+    display: flex; /* Flex display */
+    flex-direction: column; /* Column direction */
 }
+
+/* Styling for links in the footer */
+footer a {
+    text-decoration: none; /* Remove underline */
+    font-size: 2rem; /* Font size */
+    color: black; /* Text color */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+/* Styling for additional information in the footer */
+footer .add-info {
+    font-size: 2rem; /* Font size */
+    text-align: center; /* Center align text */
+    padding-bottom: 10px; /* Bottom padding */
+}
+
+/* Styling for horizontal line in the footer */
+footer .hr-line:before {
+    content: ""; /* Empty content */
+    width: 80%; /* Width */
+    height: 3px; /* Height */
+    display: block; /* Block display */
+    background-color: black; /* Background color */
+    margin: 20px auto; /* Margin */
+}
+
+/* Styling for contact icons in the footer */
+footer .get-in-touch img {
+    width: 40px; /* Width */
+    height: 40px; /* Height */
+    padding: 5px 5px; /* Padding */
+    transition: transform 0.5s ease-in-out; /* Transition effect */
+}
+
+/* Styling for the contact section in the footer */
+footer .get-in-touch {
+    text-align: center; /* Center align text */
+}
+
+/* Styling for hover effect on contact icons */
+footer .get-in-touch img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Styling for back-to-top button */
+.back-to-top {
+    position: fixed; /* Fixed position */
+    bottom: 5rem; /* Bottom distance */
+    right: 2rem; /* Right distance */
+    text-decoration: none; /* Remove underline */
+    display: inline-flex; /* Inline-flex display */
+    align-items: center; /* Align items */
+    justify-content: center; /* Justify content */
+    border-radius: 5px; /* Border radius */
+    background-color: var(--color); /* Background color */
+    transition: 0.2s ease-out; /* Transition effect */
+}
+
+/* Styling for back-to-top button text */
+.back-to-top span {
+    font-size: 3.5rem; /* Font size */
+    padding: 0.2em; /* Padding */
+    color: black; /* Text color */
+    font-weight: 800; /* Font weight */
+    transition: 0.2s ease-out; /* Transition effect */
+}
+
+/* Styling for hover effect on back-to-top button */
+.back-to-top:hover {
+    background: var(--button-hover-color); /* Background color on hover */
+}
+
+/* Styling for hover effect on back-to-top button text */
+.back-to-top span:hover {
+    transform: translateY(-2px); /* Move text up on hover */
+}
+
