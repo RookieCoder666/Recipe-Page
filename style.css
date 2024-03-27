@@ -39,21 +39,16 @@ html {
 }
 
 body {
-    background-color: #0c0b0b;
-    /* Background color */
+    background-color: rgb(12, 11, 11);
     color: white;
-    /* Default text color */
     overflow-x: hidden;
-    /* Hide horizontal overflow */
 }
 
 /* Header styles */
 header {
     position: relative;
     height: 100vh;
-    /* Full viewport height */
     text-transform: capitalize;
-    /* Capitalize text */
 }
 
 /* Header background */
@@ -68,7 +63,6 @@ header::before {
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(30%);
-    /* Adjust background brightness */
     z-index: -1;
 }
 
@@ -107,7 +101,6 @@ header .nav-container .logo h3 {
 /* Styling for all elements containing <span> tags */
 span {
     color: var(--main-color);
-    /* Set color using CSS variable */
 }
 
 /* Navigation bar styling */
@@ -280,7 +273,6 @@ main .popular-recipes .card-container {
     gap: 70px;
     text-align: center;
     margin-top: 100em;
-    /* This margin seems too large, check if it's intended */
 }
 
 /* Styling for images in popular recipes cards */
@@ -291,7 +283,6 @@ main .popular-recipes .card-container img {
     border-radius: 10px;
     position: relative;
     top: -15%;
-    /* Consider removing this, as it might affect the layout */
 }
 
 /* Styling for the body of popular recipes cards */
@@ -333,7 +324,6 @@ main .card1:hover {
 }
 
 main .card1:hover .card-body {
-    /* visibility: visible; */
     opacity: 1;
     transition-delay: 0.5ms;
 }
@@ -354,6 +344,10 @@ main h2 a {
     font-size: 3.5rem;
     text-decoration: none;
     color: white;
+}
+
+.product h2 {
+    padding-bottom: 20px;
 }
 
 /* Styling for images in product cards */
@@ -398,7 +392,6 @@ main .product .product-card-container img {
     border-radius: 10px;
     padding: 0 2em;
     transition: all 0.6s ease-in-out;
-    /* Smooth transition effect */
 }
 
 /* Styling for headings within the card body */
@@ -432,6 +425,10 @@ main .product .product-card-container img {
 
 
 /* Styling for the slider container within the gallery */
+.gallery h2 {
+    padding-bottom: 20px;
+}
+
 .gallery .slider-container .img {
     display: flex;
     align-items: center;
@@ -446,50 +443,38 @@ main .product .product-card-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensuring images cover the container */
     transition: transform 1s;
-    /* Adding a transition effect for smooth transformation */
 }
 
 /* Styling for images within the slider */
 .gallery .slider img {
     width: 550px;
-    /* Adjusting width for styling */
     height: 500px;
-    /* Adjusting height for styling */
     border-radius: 10px;
-    /* Adding border radius */
     transform: scale(0.9);
-    /* Initial scaling effect */
 }
 
 /* Animation for sliding images */
 .gallery .img-slider {
     display: inline-block;
     animation: loop 60s linear infinite;
-    /* Applying looping animation */
 }
 
 /* Styling for the slider */
 .gallery .slider {
     overflow: hidden;
-    /* Hiding overflow */
     white-space: nowrap;
-    /* Preventing wrapping */
     position: relative;
-    /* Positioning */
 }
 
 /* Keyframes for the sliding animation */
 @keyframes loop {
     from {
         transform: translateX(0);
-        /* Starting position */
     }
 
     to {
         transform: translateX(-100%);
-        /* Ending position */
     }
 }
 
@@ -501,6 +486,15 @@ main .product .product-card-container img {
 
 
 /* Styling for the food-tales container */
+
+.food-tale {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.food-tale h2 {
+    padding-bottom: 20px;
+}
 
 /* Styling for the image slide */
 .img-slide {
@@ -595,7 +589,7 @@ main .product .product-card-container img {
 /* Styling for navigation items */
 .img-nav {
     position: absolute;
-    bottom: 5px;
+    bottom: -35px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -613,139 +607,106 @@ main .product .product-card-container img {
     cursor: pointer;
 }
 
-/* Styling for hover effect on navigation items */
 .img-nav-item:hover {
-    background-color: red;
+    background-color: #FF0000;
 }
-
 
 
 
 /* Styling for the footer */
 footer {
-    background: var(--color);
-    /* Background color */
+    background: linear-gradient(to bottom, rgb(12, 11, 11), rgb(26, 25, 25), rgba(40, 39, 39, 0.597));
     font-family: var(--font-main);
-    /* Font family */
-    color: black;
-    /* Text color */
     font-weight: 700;
-    /* Font weight */
     border-radius: 50px 50px 0 0;
-    /* Border radius */
     text-transform: uppercase;
-    /* Uppercase text */
 }
 
 /* Styling for the rows in the footer container */
 footer .footer-container .row {
     display: flex;
-    /* Flex display */
     justify-content: center;
-    /* Center align content */
     flex-wrap: wrap;
-    /* Allow wrapping */
     gap: 50px;
-    /* Gap between elements */
     font-size: 2rem;
-    /* Font size */
     padding-top: 20px;
-    /* Top padding */
 }
 
 /* Styling for the info section in the footer */
 footer .footer-container .row .info {
     width: 50%;
-    /* Width */
 }
 
 /* Styling for paragraphs in the footer */
 footer .footer-container .row p {
     font-size: 2.5rem;
-    /* Font size */
 }
 
 /* Styling for spans in the footer */
 footer .footer-container .row span {
     font-size: inherit;
-    /* Inherit font size */
 }
 
 /* Styling for headings in the footer */
 footer .footer-container .row h5 {
     font-size: 3rem;
-    /* Font size */
+    padding-bottom: 10px;
 }
 
 /* Styling for top-links and quick-links in the footer */
 footer .top-links,
 footer .quick-links {
     display: flex;
-    /* Flex display */
     flex-direction: column;
-    /* Column direction */
 }
 
 /* Styling for links in the footer */
 footer a {
     text-decoration: none;
-    /* Remove underline */
     font-size: 2rem;
-    /* Font size */
-    color: black;
-    /* Text color */
+    padding: 2px 0;
+    color: white;
     text-transform: uppercase;
-    /* Uppercase text */
+    transition: color 0.5s ease-in-out;
+}
+
+footer a:hover {
+    color: var(--main-color);
 }
 
 /* Styling for additional information in the footer */
 footer .add-info {
     font-size: 2rem;
-    /* Font size */
     text-align: center;
-    /* Center align text */
     padding-bottom: 10px;
-    /* Bottom padding */
 }
 
 /* Styling for horizontal line in the footer */
 footer .hr-line:before {
     content: "";
-    /* Empty content */
     width: 80%;
-    /* Width */
     height: 3px;
-    /* Height */
     display: block;
-    /* Block display */
     background-color: black;
-    /* Background color */
     margin: 20px auto;
-    /* Margin */
 }
 
 /* Styling for contact icons in the footer */
 footer .get-in-touch img {
     width: 40px;
-    /* Width */
     height: 40px;
-    /* Height */
     padding: 5px 5px;
-    /* Padding */
     transition: transform 0.5s ease-in-out;
-    /* Transition effect */
 }
 
 /* Styling for the contact section in the footer */
 footer .get-in-touch {
     text-align: center;
-    /* Center align text */
 }
 
 /* Styling for hover effect on contact icons */
 footer .get-in-touch img:hover {
     transform: scale(1.1);
-    /* Scale effect on hover */
 }
 
 
@@ -753,49 +714,32 @@ footer .get-in-touch img:hover {
 /* Styling for back-to-top button */
 .back-to-top {
     position: fixed;
-    /* Fixed position */
     bottom: 5rem;
-    /* Bottom distance */
     right: 2rem;
-    /* Right distance */
     text-decoration: none;
-    /* Remove underline */
     display: inline-flex;
-    /* Inline-flex display */
     align-items: center;
-    /* Align items */
     justify-content: center;
-    /* Justify content */
     border-radius: 5px;
-    /* Border radius */
     background-color: var(--color);
-    /* Background color */
     transition: 0.2s ease-out;
-    /* Transition effect */
 }
 
 /* Styling for back-to-top button text */
 .back-to-top span {
     font-size: 3.5rem;
-    /* Font size */
     padding: 0.2em;
-    /* Padding */
     color: black;
-    /* Text color */
     font-weight: 800;
-    /* Font weight */
-    transition: 0.2s ease-out;
-    /* Transition effect */
+    transition: 0.2s ease-out
 }
 
 /* Styling for hover effect on back-to-top button */
 .back-to-top:hover {
     background: var(--button-hover-color);
-    /* Background color on hover */
 }
 
 /* Styling for hover effect on back-to-top button text */
 .back-to-top span:hover {
     transform: translateY(-2px);
-    /* Move text up on hover */
 }
