@@ -1,745 +1,137 @@
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Passero+One&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Kode+Mono:wght@400..700&display=swap');
+/* Font-Weight is 400 and 700 */
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 62.5%;
-    /* Setting base font size to 10px */
-}
-
-:root {
-    --font-main: "Quantico", sans-serif;
-    /* Main font family */
-    --font: "Passero One", sans-serif;
-    /* Secondary font family */
-    --font1: "Kode Mono", monospace;
-    /* Tertiary font family */
-    --font2: "Finger Paint", sans-serif;
-    /* Quaternary font family */
-    --main-color: #FF0000;
-    /* Main color */
-    --second-color: #FF004D;
-    /* Secondary color */
-    --button-color: #C50808;
-    /* Button color */
-    --button-hover-color: #dca5a5;
-    /* Button hover color */
-    --color: #E8A6A6;
-    /* Additional color */
-}
-
-/* General styles */
-html {
-    scroll-behavior: smooth;
-    /* Smooth scrolling behavior */
 }
 
 body {
-    background-color: rgb(12, 11, 11);
-    color: white;
-    overflow-x: hidden;
+    background: #000;
+    color: #FAF5FF;
 }
 
-/* Header styles */
-header {
-    position: relative;
-    height: 100vh;
-    text-transform: capitalize;
+:root{
+    --main-color:#CE0A3A;
+    --card-color:#DD6667;
+    --nav-background:#1A1919;
+    --non-veg-color:#C10000;
+    --veg-color:#25E06F;
 }
 
-/* Header background */
-header::before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background: url(./Img/prep-food.webp);
+body {
+    font-family:"Quantico", sans-serif;
+    font-weight: 700;
+    background: #000;
+    color: #FAF5FF;
+}
+
+a{
+    text-decoration: none;
+    color: #FAF5FF;
+}
+:is(span , .active){
+    color: var(--main-color);
+}
+
+/* Header */
+header{
+    background: url(./Img/background-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(30%);
-    z-index: -1;
-}
-
-/* Header navigation container */
-header .nav-container {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 4%;
-    left: 5%;
-    right: 5%;
-}
-
-/* Logo styles */
-header .nav-container .logo {
-    display: flex;
-    gap: 10px;
-    font-family: var(--font-main);
-}
-
-header .nav-container img {
-    width: 35px;
-}
-
-header .nav-container .logo h3,
-header .nav-container .logo span {
-    font-size: 2.5rem;
-}
-
-header .nav-container .logo h3 {
-    align-self: end;
-}
-
-
-
-/* Styling for all elements containing <span> tags */
-span {
-    color: var(--main-color);
-}
-
-/* Navigation bar styling */
-header .nav-container nav {
-    display: flex;
-}
-
-header .nav-container .nav-bar a {
-    font-size: 3rem;
-    font-family: var(--font);
-    color: white;
-    text-decoration: none;
-    margin: 0em 0.6em;
-}
-
-header .nav-container nav a::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 5px;
-    background-color: var(--button-hover-color);
-    transition: all 0.5s ease-in-out;
-}
-
-header .nav-container nav a:hover::after {
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
+    height: 90vh;
+    padding-top:50px ;
+}
+
+/* Header Content */
+.content{
     margin: 0 auto;
+    width: 90%;
+    padding: 20px 20px;
+    border-radius: 50px;
+    background: var(--nav-background) ;
 }
-
-/* Button styling */
-.button {
-    display: inline-block;
-    background: var(--button-color);
-    border-radius: 5px;
-    padding: 5px 20px;
-    transition: all 0.5s linear;
-}
-
-.button a {
-    font-size: 2rem;
-    font-family: var(--font-main);
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.5s linear;
-}
-
-.button:hover {
-    background: var(--button-hover-color);
-}
-
-.button:hover a {
-    color: black;
-    font-weight: 600;
-}
-
-
-/* Header content styling */
-header .header-content {
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    right: 5%;
-    font-family: var(--font-main);
-}
-
-header .header-content h1 {
-    font-size: 5rem;
-}
-
-header .header-content span {
-    font-size: 5rem;
-}
-
-header .header-content p {
-    font-size: 2rem;
-    font-style: italic;
-    padding-top: 15px;
-    padding-bottom: 30px;
-}
-
-/* Main content styling */
-main {
-    font-family: var(--font-main);
-    text-transform: capitalize;
-    margin: 5em 24em;
-}
-
-main h2 {
-    font-size: 4rem;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/* Styling for image containers */
-main .img-container img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: 0.5s ease-in-out;
-}
-
-main .img-container img:hover {
-    filter: drop-shadow(0 0 2.5rem var(--color));
-    transform: rotate(360deg);
-}
-
-main .img-container a {
-    text-decoration: none;
-    color: white;
-}
-
-main .img-container p {
-    font-size: 2.2rem;
-    text-align: center;
-    text-decoration: none;
-    padding-top: 1em;
-}
-
-main .img-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 50px;
-    margin: 20em 0em;
-}
-
-/* Styling for the 'About Us' section */
-main .about-us {
+/* Header NavBar */
+nav{
     display: flex;
     justify-content: space-between;
-    gap: 50px;
-    margin: 45em 0;
-}
-
-
-/* Styling for images in the 'About Us' section */
-main .about-us img {
-    width: 480px;
-    height: 580px;
-    border-radius: 50px;
-    object-fit: cover;
-    transition: 0.5s ease-in-out;
-}
-
-main .about-us img:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 2.5rem var(--color));
-}
-
-/* Styling for headings and paragraphs in the 'About Us' section */
-main .about-us h3 a {
-    font-size: 5rem;
-    color: var(--second-color);
-    text-decoration: none;
-}
-
-main .about-us p,
-main .about-us span {
-    font-size: 3.2rem;
-}
-
-/* Styling for popular recipes card container */
-main .popular-recipes .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 70px;
-    text-align: center;
-    margin-top: 100em;
-}
-
-/* Styling for images in popular recipes cards */
-main .popular-recipes .card-container img {
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    position: relative;
-    top: -15%;
-}
-
-/* Styling for the body of popular recipes cards */
-main .popular-recipes .card-body {
-    color: rgb(0, 0, 0);
-    font-family: var(--font-main);
-    font-weight: 600;
-    position: relative;
-    top: -12%;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-/* Styling for headings in popular recipes cards */
-main .popular-recipes h3 {
-    font-size: 2.5rem;
-    font-family: var(--font2);
-}
-
-/* Styling for paragraphs in popular recipes cards */
-main .popular-recipes .card-p {
-    font-size: 2rem;
-    font-family: var(--font1);
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding-top: 0.5em;
-}
-
-main .popular-recipes .card1 {
-    width: 500px;
-    max-height: 320px;
-    background-color: var(--color);
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-main .card1:hover {
-    max-height: 500px;
-}
-
-main .card1:hover .card-body {
-    opacity: 1;
-    transition-delay: 0.5ms;
-}
-
-main .card1 a {
-    text-decoration: none;
-}
-
-/* Styling for product section */
-main .product {
-    margin: 2em 0;
-    font-size: 3rem;
-    color: white;
-}
-
-/* Styling for headings in product section */
-main h2 a {
-    font-size: 3.5rem;
-    text-decoration: none;
-    color: white;
-}
-
-.product h2 {
-    padding-bottom: 20px;
-}
-
-/* Styling for images in product cards */
-main .product .product-card-container img {
-    width: 500px;
-    height: 550px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Styling for product card container */
-.product .product-card-container {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 70px;
+    font-size: 30px;
 }
 
-/* Styling for the card wrapper within the product section */
-.product .card2 {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Styling for the card body within the product section */
-.product .card-body {
-    width: 100%;
-    height: 100%;
-    font-family: var(--font-main);
-    position: absolute;
-    top: 0;
-    right: -100%;
-    /* Initially hidden off the screen */
+menu{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #00000044;
-    /* Semi-transparent background */
-    backdrop-filter: blur(10px);
-    /* Blurred background effect */
-    border-radius: 10px;
-    padding: 0 2em;
-    transition: all 0.6s ease-in-out;
+    list-style-type: none;
 }
 
-/* Styling for headings within the card body */
-.product .card-body h4 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    margin: 15px 0;
+menu li{
+    margin: 0 20px;
+    
 }
-
-/* Styling for paragraphs within the card body */
-.product .card-body p {
-    font-size: 2.2rem;
-    margin: 5px 0 20px;
-}
-
-/* Styling for buttons within the card body */
-.product .card-body button {
-    font-size: 2rem;
-    font-family: var(--font-main);
-    padding: 0.1em 1em;
-    width: 150px;
-}
-
-/* Transition effect for revealing the card body on hover */
-.product .card2:hover .card-body {
-    right: 0;
-    /* Revealing the card body by moving it to the right */
-}
-
-
-
-
-/* Styling for the slider container within the gallery */
-.gallery h2 {
-    padding-bottom: 20px;
-}
-
-.gallery .slider-container .img {
-    display: flex;
-    align-items: center;
-    width: 500px;
-    height: 400px;
-    perspective: 100px;
-    /* Adding perspective for 3D effect */
-}
-
-/* Styling for images within the gallery */
-.gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 1s;
-}
-
-/* Styling for images within the slider */
-.gallery .slider img {
-    width: 550px;
-    height: 500px;
-    border-radius: 10px;
-    transform: scale(0.9);
-}
-
-/* Animation for sliding images */
-.gallery .img-slider {
-    display: inline-block;
-    animation: loop 60s linear infinite;
-}
-
-/* Styling for the slider */
-.gallery .slider {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-}
-
-/* Keyframes for the sliding animation */
-@keyframes loop {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-/* Pausing animation on hover */
-.gallery .slider:hover .img-slider {
-    animation-play-state: paused;
-}
-
-
-
-/* Styling for the food-tales container */
-
-.food-tale {
-    margin-top: 40px;
-    margin-bottom: 80px;
-}
-
-.food-tale h2 {
-    padding-bottom: 20px;
-}
-
-/* Styling for the image slide */
-.img-slide {
-    position: relative;
-    height: 500px;
-}
-
-/* Styling for radio buttons (hidden) */
-.img-radio {
-    display: none;
-}
-
-/* Styling for the label */
-.img-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-/* Styling for the image container */
-.img-label .foodimg-container {
-    width: 50%;
-    height: 100%;
-}
-
-.img-label .foodimg-container {
-    width: 50%;
-    height: 100%;
-}
-
-/* Styling for the food Image */
-.food-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.8s ease;
-}
-
-
-/* Styling for the text container */
-/* Styling for the text container within foodimg */
-.foodimg .text {
-    width: 50%;
-    height: 100%;
-    font-size: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    transition: opacity 0.2s ease;
-}
-
-/* Styling for heading within the text container */
-.foodimg .text h1 {
-    font-size: 3rem;
-    margin-bottom: 1em;
-}
-
-/* Styling for paragraph within the text container */
-.foodimg .text p {
-    font-size: 2rem;
-}
-
-
-/* Styling for checked radio buttons */
-.img-radio:checked+.img-label .food-image {
-    opacity: 1;
-}
-
-/* Styling for unchecked radio buttons */
-.img-radio:not(:checked)+.img-label .food-image {
-    opacity: 0;
-}
-
-/* Styling for checked radio buttons and associated text */
-.img-radio:checked+.img-label .text {
-    opacity: 1;
-}
-
-/* Styling for unchecked radio buttons and associated text */
-.img-radio:not(:checked)+.img-label .text {
-    opacity: 0;
-}
-
-
-
-/* Styling for navigation items */
-.img-nav {
-    position: absolute;
-    bottom: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
-
-/* Styling for individual navigation items */
-.img-nav-item {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.img-nav-item:hover {
-    background-color: #FF0000;
-}
-
-
-
-/* Styling for the footer */
-footer {
-    background: linear-gradient(to bottom, rgb(12, 11, 11), rgb(26, 25, 25), rgba(40, 39, 39, 0.597));
-    font-family: var(--font-main);
-    font-weight: 700;
-    border-radius: 50px 50px 0 0;
-    text-transform: uppercase;
-}
-
-/* Styling for the rows in the footer container */
-footer .footer-container .row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    font-size: 2rem;
-    padding-top: 20px;
-}
-
-/* Styling for the info section in the footer */
-footer .footer-container .row .info {
-    width: 50%;
-}
-
-/* Styling for paragraphs in the footer */
-footer .footer-container .row p {
-    font-size: 2.5rem;
-}
-
-/* Styling for spans in the footer */
-footer .footer-container .row span {
-    font-size: inherit;
-}
-
-/* Styling for headings in the footer */
-footer .footer-container .row h5 {
-    font-size: 3rem;
-    padding-bottom: 10px;
-}
-
-/* Styling for top-links and quick-links in the footer */
-footer .top-links,
-footer .quick-links {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Styling for links in the footer */
-footer a {
-    text-decoration: none;
-    font-size: 2rem;
-    padding: 2px 0;
-    color: white;
-    text-transform: uppercase;
-    transition: color 0.5s ease-in-out;
-}
-
-footer a:hover {
-    color: var(--main-color);
-}
-
-/* Styling for additional information in the footer */
-footer .add-info {
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-/* Styling for horizontal line in the footer */
-footer .hr-line:before {
+menu li:after{
     content: "";
-    width: 80%;
-    height: 3px;
     display: block;
-    background-color: black;
-    margin: 20px auto;
+    height: 5px;
+    background: var(--main-color);
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.5s ease;
+}
+menu li:hover::after{
+    transform: scale(1);
+    transform-origin: right;
 }
 
-/* Styling for contact icons in the footer */
-footer .get-in-touch img {
-    width: 40px;
-    height: 40px;
-    padding: 5px 5px;
-    transition: transform 0.5s ease-in-out;
+header input , header label{
+    display: none;
+    font-size: 25px;
 }
 
-/* Styling for the contact section in the footer */
-footer .get-in-touch {
-    text-align: center;
-}
+@media(max-width:880px){
+    header label{
+        display: block;
+        cursor: pointer;
+    }
+    nav {
+        position: relative;
+        font-size: 20px;
+    }
+    menu{
+        display: none;
+        position: absolute;
+        top: 49px;
+        left: 50%;
+        transform: translate(-50%,0%);
+        background:var(--nav-background);
+        width: 95%;
+        height: auto;
+        border-radius: 20px;
+    }
+    menu li{
+        text-align: center;
+    }
 
-/* Styling for hover effect on contact icons */
-footer .get-in-touch img:hover {
-    transform: scale(1.1);
-}
+    #toggle:checked + label #bar {
+        display: none;
+      }
+      
+      #toggle:checked + label #cross {
+        display: block;
+      }
+      
+      #toggle:not(:checked) + label #cross {
+        display: none;
+      }
+      
+      #toggle:not(:checked) + label #bar {
+        display: block;
+      }
 
-
-
-/* Styling for back-to-top button */
-.back-to-top {
-    position: fixed;
-    bottom: 5rem;
-    right: 2rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    background-color: var(--color);
-    transition: 0.2s ease-out;
-}
-
-/* Styling for back-to-top button text */
-.back-to-top span {
-    font-size: 3.5rem;
-    padding: 0.2em;
-    color: black;
-    font-weight: 800;
-    transition: 0.2s ease-out
-}
-
-/* Styling for hover effect on back-to-top button */
-.back-to-top:hover {
-    background: var(--button-hover-color);
-}
-
-/* Styling for hover effect on back-to-top button text */
-.back-to-top span:hover {
-    transform: translateY(-2px);
+      #toggle:checked ~ menu {
+        display: block;
+      }
 }
