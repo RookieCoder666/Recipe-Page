@@ -88,7 +88,7 @@ menu li:hover::after{
 
 header input , header label{
     display: none;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 @media(max-width:880px){
@@ -98,7 +98,7 @@ header input , header label{
     }
     nav {
         position: relative;
-        font-size: 25px;
+        font-size: 30px;
     }
     menu{
         display: none;
