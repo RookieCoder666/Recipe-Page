@@ -11,13 +11,17 @@ body {
     background: #000;
     color: #FAF5FF;
 }
-
+::selection{
+    background-color: var(--main-color);
+    color: #FAF5FF;
+}
 :root{
     --main-color:#CE0A3A;
     --card-color:#DD6667;
     --nav-background:#1A1919;
     --non-veg-color:#C10000;
     --veg-color:#25E06F;
+    --button-hover-color:#b1193f;
 }
 
 body {
@@ -33,6 +37,9 @@ a{
 }
 :is(span , .active){
     color: var(--main-color);
+}
+p{
+    text-transform: capitalize;
 }
 
 /* Header */
@@ -91,6 +98,7 @@ header input , header label{
     font-size: 30px;
 }
 
+/* reponsive Nav bar */
 @media(max-width:880px){
     header label{
         display: block;
@@ -134,4 +142,86 @@ header input , header label{
       #toggle:checked ~ menu {
         display: block;
       }
+}
+
+/* header-content */
+
+header .header-content{
+    margin: 0 auto;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .header-info{
+    max-width: 855px;
+}
+header .header-content h1{
+    font-size: 50px;
+    line-height: 60px;
+    padding-bottom: 20px;
+}
+header .header-content .header-text{
+    font-size: 24px;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+/* button */
+.button{
+    display: inline-block;
+    text-align: center;
+    background: var(--main-color);
+    font-size: 24px;
+    padding: 5px 25px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+.button:hover{
+    background-color: var(--button-hover-color) ;
+}
+
+
+/* Main Page */
+main {
+    margin: 70px 0px;
+}
+
+main .food-description{
+    margin: 70px auto;
+    width: 90%;
+}
+
+main .container{
+    display: flex;
+    justify-content:center;
+}
+
+main .food-img img{
+    width: 500px;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+main .food-img{
+    margin-right: 20px;
+}
+main .non-veg-img {
+    margin: 0 20px 0 0;
+}
+
+main .food-info h2{
+    font-size:40px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+main .food-info p{
+    font-size: 30px;
+    padding-bottom: 120px;
+}
+
+main .food-info .button{
+    margin: 0 10px 0 0;
 }
