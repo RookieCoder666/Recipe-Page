@@ -11,171 +11,49 @@ body {
     background: #000;
     color: #FAF5FF;
 }
-::selection{
+
+::selection {
     background-color: var(--main-color);
     color: #FAF5FF;
 }
-:root{
-    --main-color:#CE0A3A;
-    --card-color:#DD6667;
-    --nav-background:#1A1919;
-    --non-veg-color:#C10000;
-    --veg-color:#25E06F;
-    --button-hover-color:#b1193f;
+
+:root {
+    --main-color: #CE0A3A;
+    --card-color: #DD6667;
+    --nav-background: #1A1919;
+    --non-veg-color: #C10000;
+    --veg-color: #25E06F;
+    --button-hover-color: #b1193f;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family:"Quantico", sans-serif;
+    font-family: "Quantico", sans-serif;
     font-weight: 700;
     background: #000;
     color: #FAF5FF;
 }
 
-a{
+a {
     text-decoration: none;
     color: #FAF5FF;
 }
-:is(span , .active){
+
+:is(span, .active) {
     color: var(--main-color);
 }
-p{
+
+p {
     text-transform: capitalize;
 }
-main h2{
-    font-size:40px;
+
+h2 {
+    font-size: 40px;
     text-transform: uppercase;
 }
 
-/* Header */
-header{
-    background: url(./Img/background-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    height: 90vh;
-    padding-top:50px ;
-}
-
-/* Header Content */
-.content{
-    margin: 0 auto;
-    width: 90%;
-    padding: 20px 20px;
-    border-radius: 50px;
-    background: var(--nav-background) ;
-}
-/* Header NavBar */
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 30px;
-}
-
-menu{
-    display: flex;
-    list-style-type: none;
-}
-
-menu li{
-    margin: 0 20px;
-    
-}
-menu li:after{
-    content: "";
-    display: block;
-    height: 5px;
-    background: var(--main-color);
-    transform: scale(0);
-    transform-origin: left;
-    transition: all 0.5s ease;
-}
-menu li:hover::after{
-    transform: scale(1);
-    transform-origin: right;
-}
-
-header input , header label{
-    display: none;
-    font-size: 30px;
-}
-
-/* reponsive Nav bar */
-@media(max-width:880px){
-    header label{
-        display: block;
-        cursor: pointer;
-    }
-    nav {
-        position: relative;
-        font-size: 25px;
-    }
-    menu{
-        display: none;
-        position: absolute;
-        top: 49px;
-        left: 50%;
-        transform: translate(-50%,0%);
-        background:var(--nav-background);
-        width: 95%;
-        height: auto;
-        border-radius: 20px;
-    }
-    menu li{
-        text-align: center;
-    }
-
-    #toggle:checked + label #bar {
-        display: none;
-      }
-      
-      #toggle:checked + label #cross {
-        display: block;
-      }
-      
-      #toggle:not(:checked) + label #cross {
-        display: none;
-      }
-      
-      #toggle:not(:checked) + label #bar {
-        display: block;
-      }
-
-      #toggle:checked ~ menu {
-        display: block;
-      }
-}
-
-/* header-content */
-
-header .header-content{
-    margin: 0 auto;
-    width: 90%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-header .header-info{
-    max-width: 855px;
-}
-header .header-content h1{
-    font-size: 50px;
-    line-height: 60px;
-    padding-bottom: 20px;
-}
-header .header-content .header-text{
-    font-size: 24px;
-    font-style: italic;
-    padding-bottom: 20px;
-}
-
 /* button */
-.button{
+.button {
     display: inline-block;
     text-align: center;
     background: var(--main-color);
@@ -184,111 +62,261 @@ header .header-content .header-text{
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
 }
-.button:hover{
-    background-color: var(--button-hover-color) ;
+
+.button:hover {
+    background-color: var(--button-hover-color);
 }
 
 
+
+/* Header */
+header {
+    background: url(./Img/background-img.jpg) no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    padding-top: 50px;
+}
+
+/* Header Content */
+.content {
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+    border-radius: 50px;
+    background: var(--nav-background);
+}
+
+/* Header NavBar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+menu {
+    display: flex;
+    list-style-type: none;
+}
+
+menu li {
+    margin: 0 20px;
+}
+
+menu li:after {
+    content: "";
+    display: block;
+    height: 5px;
+    background: var(--main-color);
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+menu li:hover::after {
+    transform: scale(1);
+    transform-origin: right;
+}
+
+header input,
+header label {
+    display: none;
+    font-size: 30px;
+}
+
+/* Responsive Nav bar */
+@media (max-width: 880px) {
+    header label {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        position: relative;
+        font-size: 25px;
+    }
+
+    menu {
+        display: none;
+        position: absolute;
+        top: 49px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background: var(--nav-background);
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    menu li {
+        text-align: center;
+    }
+
+    #toggle:checked+label #bar {
+        display: none;
+    }
+
+    #toggle:checked+label #cross {
+        display: block;
+    }
+
+    #toggle:not(:checked)+label #cross {
+        display: none;
+    }
+
+    #toggle:not(:checked)+label #bar {
+        display: block;
+    }
+
+    #toggle:checked~menu {
+        display: block;
+    }
+}
+
+
+/* Header Content */
+header .header-content {
+    margin: 0 auto;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .header-info {
+    max-width: 855px;
+}
+
+header .header-content h1 {
+    font-size: 50px;
+    line-height: 60px;
+    padding-bottom: 20px;
+}
+
+header .header-content .header-text {
+    font-size: 24px;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+
+
 /* Main Page */
-
-
 main {
     margin: 70px auto;
     width: 90%;
 }
 
-main .food-description{
-    margin: 70px auto;
+.food-description {
+    margin-bottom: 40px;
 }
 
-main .container{
+.container {
     display: flex;
-    justify-content:center;
 }
 
-main .food-img img{
-    width: 500px;
-    height: 580px;
+.container .food-img img {
+    max-width: 500px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 15px;
 }
-main .food-img{
+
+.veg-img {
     margin-right: 20px;
 }
-main .non-veg-img {
-    margin: 0 20px 0 0;
+
+.non-veg-img {
+    margin-left: 20px;
 }
 
-main .food-info p{
-    font-size: 30px;
-    padding-top: 15px;
-    padding-bottom: 120px;
+.food-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-main .food-info .button{
-    margin: 0 10px 0 0;
+.food-info p {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
+
 
 /* Popular Recipes */
 
-.popular-recipes{
+.popular-recipes {
     margin-bottom: 70px;
 }
-.popular-recipes h2{
+
+.popular-recipes h2 {
     text-align: center;
 }
-.popular-recipes .wrapper{
-    padding-top: 70px ;
-    display: flex ;
+
+.popular-recipes .wrapper {
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
     justify-content: space-evenly;
+    align-items: center;
 }
-.popular-recipes .card{
+
+.popular-recipes .card {
     width: 600px;
     background-color: var(--card-color);
     border-radius: 15px;
 }
-.popular-recipes .card img{
+
+.popular-recipes .card img {
     width: 100%;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
 }
-.popular-recipes .card-info h3{
+
+.popular-recipes .card-info .card-text {
+    padding: 0 20px;
+}
+
+.popular-recipes .card-info h3 {
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
 }
-.popular-recipes .card-info p{
+
+.popular-recipes .card-info p {
     font-size: 24px;
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 0;
 }
 
-.popular-recipes .card-info .button{
+.popular-recipes .card-info .button {
     width: 100%;
     text-transform: uppercase;
     padding: 15px 0;
 }
-.popular-recipes .card-info .veg-btn:hover{
+
+.popular-recipes .card-info .veg-btn:hover {
     background: var(--veg-color);
     color: black;
 }
-.popular-recipes .card-info .non-veg-btn:hover{
+
+.popular-recipes .card-info .non-veg-btn:hover {
     background: var(--non-veg-color);
 }
 
 
+
 /* FAQs */
-.faqs h2{
-text-align: center;
+.faqs h2 {
+    text-align: center;
 }
 
-.faqs .accordion input{
+.faqs .accordion input {
     display: none;
 }
 
-.faqs label{
+.faqs label {
     display: block;
-    position: relative;
     background: #FAF5FF;
     color: #000;
     font-size: 25px;
@@ -299,66 +327,201 @@ text-align: center;
     cursor: pointer;
 }
 
-.faqs label i {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.faqs .fa-angle-up{
+.question .arrow {
+    margin-left: 1px;
+}
+
+.faqs .fa-angle-up {
     display: none;
 }
-.faqs input[type="checkbox"]:checked + label .fa-angle-up {
+
+.faqs input[type="checkbox"]:checked+label .fa-angle-up {
     display: block;
 }
-.faqs input[type="checkbox"]:checked + label .fa-angle-down {
+
+.faqs input[type="checkbox"]:checked+label .fa-angle-down {
     display: none;
 }
 
 .faqs .panel {
     font-size: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-height: 0;
+    padding: 0 15px;
     background: #FAF5FF;
     color: #000;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
 }
 
-.faqs input[type="checkbox"]:checked + label + .panel {
+.faqs input[type="checkbox"]:checked+label+.panel {
     max-height: fit-content;
-
 }
 
-.faqs .questions{
+.faqs .questions {
     margin: 20px 0;
 }
 
+
+
+
 /* Footer */
-footer .row-one{
+footer {
+    background: linear-gradient(to bottom, rgb(20, 0, 0), rgb(29, 29, 29));
+}
+
+footer h3 {
+    font-size: 35px;
+}
+
+footer .row-one {
+    text-transform: uppercase;
+}
+
+footer .row-one p,
+footer .row-one a {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+footer .row-one {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     margin: 0 auto;
     width: 90%;
 }
 
-footer .row-one .info{
-    max-width: 800px;
-}
-footer .row-one a{
-    display: block;
+footer .row-one .info {
+    max-width: 900px;
 }
 
-footer .row-two{
-    text-align:center; 
+footer .row-one a {
+    display: block;
+    transition: color 0.2s ease-in-out;
 }
-footer .row-two::before{
+
+footer .row-one a:hover {
+    color: var(--main-color);
+}
+
+footer .row-two {
+    text-align: center;
+    font-size: 24px;
+}
+
+footer .row-two p {
+    text-transform: uppercase;
+}
+
+footer .row-two::before {
     content: "";
     display: block;
-    width: 90%;
-    height: 5px;
-    margin: 0 auto;
+    width: 95%;
+    height: 2px;
+    border-radius: 50px;
+    margin: 30px auto 10px auto;
     background: #FAF5FF;
+}
+
+
+
+
+/* Media */
+
+@media (max-width: 1200px) {
+    .food-info p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1044px) {
+    .food-info p {
+        font-size: 18px;
+    }
+
+    .food-buttons {
+        margin: 10px 0;
+    }
+
+    .food-buttons a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 990px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .food-buttons,
+    .food-text {
+        text-align: center;
+    }
+
+    .veg-img {
+        margin-right: 0;
+    }
+
+    .non-veg-img {
+        margin-left: 0;
+    }
+
+    .container .food-img img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 530px) {
+    header .header-content {
+        text-align: center;
+    }
+
+    header .header-content h1 {
+        font-size: 30px;
+    }
+
+    header .header-content .header-text {
+        font-size: 20px;
+    }
+
+    header .button {
+        display: block;
+    }
+}
+
+@media (max-width: 1370px) {
+    footer .row-one .info {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1013px) {
+    footer .row-one .info {
+        max-width: 100%;
+    }
+
+    footer .row-two {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .faqs label {
+        font-size: 20px;
+    }
+
+    .faqs .panel {
+        font-size: 18px;
+    }
 }
