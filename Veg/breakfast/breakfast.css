@@ -1,0 +1,17 @@
+::selection{
+    background: var(--veg-color);
+    color: #000;
+}
+
+main h1{
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 70px 0;
+    color: var(--veg-color);
+}
+
+
+footer .row-two::before {
+    background: rgb(37, 224, 111);
+}
