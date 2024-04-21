@@ -1,312 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="/Favicon/icon.png" />
+    <title>RecipeRealm</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/x-icon" href="/Favicon/icon.png" />
-  <title>RecipeRealm</title>
-</head>
+  <body>
+    <!-- Header -->
+    <header class="header-bg-img">
+      <div class="content">
+        <!-- Nav-bar -->
+        <nav>
+          <a href="index.html">Recipe<span>Realm</span></a>
 
-<body>
-  <!-- Header -->
-  <header class="header-bg-img">
-    <div class="content">
-      <!-- Nav-bar -->
-      <nav>
-        <a href="index.html">Recipe<span>Realm</span></a>
+          <input type="checkbox" id="toggle" />
+          <label for="toggle">
+            <i id="bar" class="fa-solid fa-bars-staggered"></i>
+            <i id="cross" class="fa-solid fa-xmark"></i>
+          </label>
 
-        <input type="checkbox" id="toggle" />
-        <label for="toggle">
-          <i id="bar" class="fa-solid fa-bars-staggered"></i>
-          <i id="cross" class="fa-solid fa-xmark"></i>
-        </label>
-
-        <menu>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="recipes-page.html">Recipes</a></li>
-          <li><a href="#">Gallery</a></li>
-        </menu>
-      </nav>
-    </div>
-
-    <!-- Header content -->
-    <div class="header-content">
-      <div class="header-info">
-        <h1>
-          Enjoy the Rich Flavors and Aromatic <span>Spices</span> Bursting in
-          Every Bite
-        </h1>
-        <p class="header-text">
-          Explore Delicious Recipes from Around the World
-        </p>
-
-        <a href="/recipes-page.html" class="button">View Recipes</a>
+          <menu>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="recipes-page.html">Recipes</a></li>
+            <li><a href="#">Gallery</a></li>
+          </menu>
+        </nav>
       </div>
-    </div>
-  </header>
 
-  <main>
-    <section class="Food-Description">
-      <!-- veg Food description -->
-      <div class="food-description food-des">
-        <div class="container">
-          <div class="food-img veg-img">
-            <img src="./Veg/veg-image/veg.jpg" alt="veg" />
-          </div>
-          <div class="food-info">
-            <div class="food-text">
-              <h2>Vegetarians</h2>
-              <p>
-                They're people who choose not to eat meat, whether it's for
-                health, ethical, or environmental reasons. Instead, they enjoy
-                a diet focused on fruits, vegetables, grains, nuts, and seeds.
-                Being a vegetarian can have some awesome benefits, like
-                lowering your risk of certain diseases, reducing your carbon
-                footprint, and supporting animal welfare. Plus, there are tons
-                of delicious vegetarian recipes out there that can satisfy any
-                craving! So if you're thinking about giving vegetarianism a
-                try, go for it – it's a cool choice that's good for you and
-                the planet.
-              </p>
-            </div>
-            <div class="food-buttons">
-              <a href="/Veg/breakfasts/breakfast.html" class="button">Breakfast</a>
-              <a href="/Veg/lunchs/lunch.html" class="button">Lunch</a>
-              <a href="/Veg/dinners/dinner.html" class="button">Dinner</a>
-            </div>
-          </div>
+      <!-- Header content -->
+      <div class="header-content">
+        <div class="header-info">
+          <h1>
+            Enjoy the Rich Flavors and Aromatic <span>Spices</span> Bursting in
+            Every Bite
+          </h1>
+          <p class="header-text">
+            Explore Delicious Recipes from Around the World
+          </p>
+
+          <a href="/recipes-page.html" class="button">View Recipes</a>
         </div>
       </div>
+    </header>
 
-      <!-- Non-Veg Food Description -->
-      <div class="food-description">
-        <div class="container">
-          <div class="food-info">
-            <div class="food-text">
-              <h2>Non-Vegetarians</h2>
-              <p>
-                They're people who choose not to eat meat, whether it's for
-                health, ethical, or environmental reasons. Instead, they enjoy
-                a diet focused on fruits, vegetables, grains, nuts, and seeds.
-                Being a vegetarian can have some awesome benefits, like
-                lowering your risk of certain diseases, reducing your carbon
-                footprint, and supporting animal welfare. Plus, there are tons
-                of delicious vegetarian recipes out there that can satisfy any
-                craving! So if you're thinking about giving vegetarianism a
-                try, go for it – it's a cool choice that's good for you and
-                the planet.
-              </p>
-            </div>
-            <div class="food-buttons">
-              <a href="/Non-veg/breakfasts/" class="button">Breakfast</a>
-              <a href="/Non-veg/lunchs/" class="button">Lunch</a>
-              <a href="/Non-veg/dinners/" class="button">Dinner</a>
-            </div>
-          </div>
-          <div class="food-img non-veg-img">
-            <img src="./Non-veg/non-veg-img/non-veg.jpg" alt="non-veg" />
-          </div>
-        </div>
-      </div>
-    </section>
+    <main>
+      <section class="Food-Description">
 
-    <section class="Popular-Recipes">
-      <!-- Popular Recipes -->
-      <div class="popular-recipes">
-        <h2>Popular Recipes</h2>
-
-        <div class="wrapper">
-          <!-- Card For Veg-Food -->
-          <div class="card">
-            <div class="card-img">
-              <img src="./Img/placeholder-img.webp" alt="" />
+        <!-- veg Food description -->
+        <div class="food-description food-des">
+          <div class="container">
+            <div class="food-img veg-img">
+              <img src="./Veg/veg-image/veg.jpg" alt="veg" />
             </div>
-            <div class="card-info">
-              <div class="card-text">
-                <h3>Ratatouille</h3>
+            <div class="food-info">
+              <div class="food-text">
+                <h2>Vegetarians</h2>
                 <p>
-                  A rustic French stew of mixed vegetables, likely originating
-                  from Provence. Its name derived from "touiller," meaning "to
-                  stir," reflects its preparation method. Beloved for its
-                  simplicity and versatility, ratatouille gained global
-                  recognition, partly thanks to an animated film featuring a
-                  gourmet rendition.
+                  They're people who choose not to eat meat, whether it's for
+                  health, ethical, or environmental reasons. Instead, they enjoy
+                  a diet focused on fruits, vegetables, grains, nuts, and seeds.
+                  Being a vegetarian can have some awesome benefits, like
+                  lowering your risk of certain diseases, reducing your carbon
+                  footprint, and supporting animal welfare. Plus, there are tons
+                  of delicious vegetarian recipes out there that can satisfy any
+                  craving! So if you're thinking about giving vegetarianism a
+                  try, go for it – it's a cool choice that's good for you and
+                  the planet.
                 </p>
               </div>
-              <div class="btn">
-                <a href="/Veg/breakfasts/Recipe-4/recipe.html" class="button veg-btn">View Recipe</a>
+              <div class="food-buttons">
+                <a href="/veg-breakfasts/breakfast.html" class="button"
+                  >Breakfast</a
+                >
+                <a href="/veg-lunchs/" class="button">Lunch</a>
+                <a href="/veg-lunchs/" class="button">Dinner</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Card For Non-Veg-Food -->
-          <div class="card">
-            <div class="card-img">
-              <img src="./Img/placeholder-img.webp" alt="" />
-            </div>
-            <div class="card-info">
-              <div class="card-text">
-                <h3>Chicken Tikka Masala</h3>
+        <!-- Non-Veg Food Description -->
+        <div class="food-description">
+          <div class="container">
+            <div class="food-info">
+              <div class="food-text">
+                <h2>Non-Vegetarians</h2>
                 <p>
-                  A disputed origin dish, possibly originating in the Indian
-                  subcontinent or the UK. It comprises marinated grilled
-                  chicken (tikka) in a creamy tomato-based sauce (masala).
-                  This iconic dish symbolizes the fusion of Indian and British
-                  culinary traditions, enjoyed worldwide for its rich flavors.
+                  They're people who choose not to eat meat, whether it's for
+                  health, ethical, or environmental reasons. Instead, they enjoy
+                  a diet focused on fruits, vegetables, grains, nuts, and seeds.
+                  Being a vegetarian can have some awesome benefits, like
+                  lowering your risk of certain diseases, reducing your carbon
+                  footprint, and supporting animal welfare. Plus, there are tons
+                  of delicious vegetarian recipes out there that can satisfy any
+                  craving! So if you're thinking about giving vegetarianism a
+                  try, go for it – it's a cool choice that's good for you and
+                  the planet.
                 </p>
               </div>
-              <div class="btn">
-                <a href="#" class="button non-veg-btn">View Recipe</a>
+              <div class="food-buttons">
+                <a href="/Non-veg/breakfasts/" class="button">Breakfast</a>
+                <a href="/Non-veg/lunchs/" class="button">Lunch</a>
+                <a href="/Non-veg/dinners/" class="button">Dinner</a>
+              </div>
+            </div>
+            <div class="food-img non-veg-img">
+              <img src="./Non-veg/non-veg-img/non-veg.jpg" alt="non-veg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Popular-Recipes">
+        <!-- Popular Recipes -->
+        <div class="popular-recipes">
+          <h2>Popular Recipes</h2>
+
+          <div class="wrapper">
+            <!-- Card For Veg-Food -->
+            <div class="card">
+              <div class="card-img">
+                <img src="./Img/placeholder-img.webp" alt="" />
+              </div>
+              <div class="card-info">
+                <div class="card-text">
+                  <h3>Ratatouille</h3>
+                  <p>
+                    A rustic French stew of mixed vegetables, likely originating
+                    from Provence. Its name derived from "touiller," meaning "to
+                    stir," reflects its preparation method. Beloved for its
+                    simplicity and versatility, ratatouille gained global
+                    recognition, partly thanks to an animated film featuring a
+                    gourmet rendition.
+                  </p>
+                </div>
+                <div class="btn">
+                  <a
+                    href="/Veg/breakfasts/Recipe-4/recipe.html"
+                    class="button veg-btn"
+                    >View Recipe</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Card For Non-Veg-Food -->
+            <div class="card">
+              <div class="card-img">
+                <img src="./Img/placeholder-img.webp" alt="" />
+              </div>
+              <div class="card-info">
+                <div class="card-text">
+                  <h3>Chicken Tikka Masala</h3>
+                  <p>
+                    A disputed origin dish, possibly originating in the Indian
+                    subcontinent or the UK. It comprises marinated grilled
+                    chicken (tikka) in a creamy tomato-based sauce (masala).
+                    This iconic dish symbolizes the fusion of Indian and British
+                    culinary traditions, enjoyed worldwide for its rich flavors.
+                  </p>
+                </div>
+                <div class="btn">
+                  <a href="#" class="button non-veg-btn">View Recipe</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="FAQS">
-      <!-- FAQs -->
-      <div class="faqs">
-        <h2>FAQs</h2>
+      <section class="FAQS">
+        <!-- FAQs -->
+        <div class="faqs">
+          <h2>FAQs</h2>
 
-        <div class="accordion">
-          <div class="q1 questions">
-            <input type="checkbox" id="question-1" />
-            <label for="question-1">
-              <div class="question">
-                <div class="question-1">
-                  <p>
-                    Are the recipes on RecipeRealm suitable for beginners?
-                  </p>
+          <div class="accordion">
+            <div class="q1 questions">
+              <input type="checkbox" id="question-1" />
+              <label for="question-1">
+                <div class="question">
+                  <div class="question-1">
+                    <p>
+                      Are the recipes on RecipeRealm suitable for beginners?
+                    </p>
+                  </div>
+                  <div class="arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="fa-solid fa-angle-up"></i>
+                  </div>
                 </div>
-                <div class="arrow">
-                  <i class="fa-solid fa-angle-down"></i>
-                  <i class="fa-solid fa-angle-up"></i>
-                </div>
+              </label>
+              <div class="panel">
+                <p>
+                  Yes, many recipes on RecipeRealm are beginner-friendly. They
+                  offer clear instructions, ingredient lists, and sometimes
+                  visuals to guide you. Start with simpler recipes and gradually
+                  explore more complex ones. Have fun experimenting in the
+                  kitchen!
+                </p>
               </div>
-            </label>
-            <div class="panel">
-              <p>
-                Yes, many recipes on RecipeRealm are beginner-friendly. They
-                offer clear instructions, ingredient lists, and sometimes
-                visuals to guide you. Start with simpler recipes and gradually
-                explore more complex ones. Have fun experimenting in the
-                kitchen!
-              </p>
             </div>
-          </div>
 
-          <div class="q2 questions">
-            <input type="checkbox" id="question-2" />
-            <label for="question-2">
-              <div class="question">
-                <div class="question-2">
-                  <p>
-                    Do you offer nutritional information for your recipes?
-                  </p>
+            <div class="q2 questions">
+              <input type="checkbox" id="question-2" />
+              <label for="question-2">
+                <div class="question">
+                  <div class="question-2">
+                    <p>
+                      Do you offer nutritional information for your recipes?
+                    </p>
+                  </div>
+                  <div class="arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="fa-solid fa-angle-up"></i>
+                  </div>
                 </div>
-                <div class="arrow">
-                  <i class="fa-solid fa-angle-down"></i>
-                  <i class="fa-solid fa-angle-up"></i>
-                </div>
+              </label>
+              <div class="panel">
+                <p>
+                  Yes, RecipeRealm provides nutritional information for many of
+                  its recipes. Look for the "Nutrition Facts" section on the
+                  recipe page to find details such as calories, fat, protein,
+                  carbohydrates, and more per serving.
+                </p>
               </div>
-            </label>
-            <div class="panel">
-              <p>
-                Yes, RecipeRealm provides nutritional information for many of
-                its recipes. Look for the "Nutrition Facts" section on the
-                recipe page to find details such as calories, fat, protein,
-                carbohydrates, and more per serving.
-              </p>
             </div>
-          </div>
 
-          <div class="q3 questions">
-            <input type="checkbox" id="question-3" />
-            <label for="question-3">
-              <div class="question">
-                <div class="question-3">
-                  <p>Are the ingredients for your recipes easy to find?</p>
+            <div class="q3 questions">
+              <input type="checkbox" id="question-3" />
+              <label for="question-3">
+                <div class="question">
+                  <div class="question-3">
+                    <p>Are the ingredients for your recipes easy to find?</p>
+                  </div>
+                  <div class="arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="fa-solid fa-angle-up"></i>
+                  </div>
                 </div>
-                <div class="arrow">
-                  <i class="fa-solid fa-angle-down"></i>
-                  <i class="fa-solid fa-angle-up"></i>
-                </div>
+              </label>
+              <div class="panel">
+                <p>
+                  Yes, RecipeRealm strives to use ingredients that are commonly
+                  found in grocery stores. You'll typically find ingredients
+                  like fruits, vegetables, meats, grains, and pantry staples in
+                  our recipes, making them easy to locate for most home cooks.
+                </p>
               </div>
-            </label>
-            <div class="panel">
-              <p>
-                Yes, RecipeRealm strives to use ingredients that are commonly
-                found in grocery stores. You'll typically find ingredients
-                like fruits, vegetables, meats, grains, and pantry staples in
-                our recipes, making them easy to locate for most home cooks.
-              </p>
             </div>
-          </div>
 
-          <div class="q4 questions">
-            <input type="checkbox" id="question-4" />
-            <label for="question-4">
-              <div class="question">
-                <div class="question-3">
-                  <p>
-                    Do you provide tips for cooking techniques or ingredient
-                    substitutions?
-                  </p>
+            <div class="q4 questions">
+              <input type="checkbox" id="question-4" />
+              <label for="question-4">
+                <div class="question">
+                  <div class="question-3">
+                    <p>
+                      Do you provide tips for cooking techniques or ingredient
+                      substitutions?
+                    </p>
+                  </div>
+                  <div class="arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="fa-solid fa-angle-up"></i>
+                  </div>
                 </div>
-                <div class="arrow">
-                  <i class="fa-solid fa-angle-down"></i>
-                  <i class="fa-solid fa-angle-up"></i>
-                </div>
+              </label>
+              <div class="panel">
+                <p>
+                  Yes, RecipeRealm often includes cooking tips and suggestions
+                  for ingredient substitutions to help you navigate the kitchen
+                  with confidence. Look for helpful hints within the recipe
+                  instructions to enhance your cooking experience and adapt
+                  recipes to your preferences or dietary needs.
+                </p>
               </div>
-            </label>
-            <div class="panel">
-              <p>
-                Yes, RecipeRealm often includes cooking tips and suggestions
-                for ingredient substitutions to help you navigate the kitchen
-                with confidence. Look for helpful hints within the recipe
-                instructions to enhance your cooking experience and adapt
-                recipes to your preferences or dietary needs.
-              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <div class="row-one">
-      <div class="info">
-        <h3>About Us</h3>
+    <footer>
+      <div class="row-one">
+        <div class="info">
+          <h3>About Us</h3>
+          <p>
+            Recipe<span>Realm</span> is your go-to destination for culinary
+            inspiration and recipes. Join our community of food enthusiasts and
+            explore a world of flavors right from kitchen. Happy cooking!
+          </p>
+        </div>
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <div class="links">
+            <a href="#">About Us</a>
+            <a href="#">contact us</a>
+            <a href="#">terms and conditions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-two">
         <p>
-          Recipe<span>Realm</span> is your go-to destination for culinary
-          inspiration and recipes. Join our community of food enthusiasts and
-          explore a world of flavors right from kitchen. Happy cooking!
+          @ <a href="https://github.com/RookieCoder666">RookieCoder</a> | All
+          Rights Reserved | 2024
         </p>
       </div>
-      <div class="quick-links">
-        <h3>Quick Links</h3>
-        <div class="links">
-          <a href="#">About Us</a>
-          <a href="#">contact us</a>
-          <a href="#">terms and conditions</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row-two">
-      <p>
-        @ <a href="https://github.com/RookieCoder666">RookieCoder</a> | All
-        Rights Reserved | 2024
-      </p>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
