@@ -61,6 +61,10 @@ main .recipe-information ul li , ol li{
 main .cooking-tips{
     margin: 70px 0;
 }
-footer .row-two::before {
+footer .veg-footer::before {
     background: rgb(37, 224, 111);
+}
+
+footer .non-veg-footer::before {
+    background: rgb(255, 102, 102);
 }

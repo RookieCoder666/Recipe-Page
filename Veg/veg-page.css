@@ -16,6 +16,6 @@ main .food-description .food-text h2 {
 }
 
 
-footer .row-two::before {
+footer .veg-footer::before {
     background: rgb(37, 224, 111);
 }
