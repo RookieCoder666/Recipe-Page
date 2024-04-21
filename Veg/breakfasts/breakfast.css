@@ -1,0 +1,21 @@
+::selection {
+    background: var(--veg-color);
+    color: #000;
+}
+
+main h1 {
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 70px 0;
+    color: var(--veg-color);
+}
+
+main .food-description .food-text h2 {
+    padding-bottom: 15px;
+}
+
+
+footer .row-two::before {
+    background: rgb(37, 224, 111);
+}
