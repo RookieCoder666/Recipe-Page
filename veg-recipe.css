@@ -64,7 +64,3 @@ main .cooking-tips{
 footer .veg-footer::before {
     background: rgb(37, 224, 111);
 }
-
-footer .non-veg-footer::before {
-    background: rgb(255, 102, 102);
-}
