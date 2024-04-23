@@ -68,10 +68,6 @@ main .non-vegetarians .text h2::selection {
     background-color: var(--non-veg-color);
 }
 
-
-
-
-
 .beverages::before {
     content: "";
     display: block;

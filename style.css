@@ -222,7 +222,7 @@ main {
 .container .food-img img {
     max-width: 500px;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .veg-img {

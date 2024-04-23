@@ -1,0 +1,10 @@
+main h1 {
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 70px 0;
+}
+
+main .food-description .food-text h2 {
+    padding-bottom: 15px;
+}

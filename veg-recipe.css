@@ -11,7 +11,7 @@ main h1 {
 }
 
 main .info {
-    margin: 20px 0 70px 0;
+    margin: 20px 0 70px;
 }
 
 main img {
@@ -25,42 +25,98 @@ main .info p {
     padding-top: 20px;
 }
 
-main .recipe-information span{
-    color: #FAF5FF;
+main .recipe-information span {
+    color: #faf5ff;
     text-transform: uppercase;
 }
 
-main .recipe-information h2{
+main .recipe-information h2 {
     font-size: 50px;
     text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin: 50px 0;
 }
-main .time {
-    font-size: 30px;
-}
-main .time p{
+
+main .time p {
     padding: 5px 0;
 }
 
-main .nutritional-information{
-margin: 50px 0;
-}
-main .recipe-information h3{
+main .recipe-information h3 {
     font-size: 35px;
     text-transform: uppercase;
     padding-bottom: 10px;
 }
-main .recipe-information ul , ol{
+
+main .recipe-information ul,
+main .recipe-information ol {
     font-size: 25px;
-}
-main .recipe-information ul li , ol li{
-    padding: 5px 0;
+    padding: 0 0 0 25px;
 }
 
-main .cooking-tips{
+main .cooking-tips {
     margin: 70px 0;
 }
+
 footer .veg-footer::before {
     background: rgb(37, 224, 111);
+}
+
+@media (max-width: 990px) {
+    main h1 {
+        font-size: 40px;
+    }
+
+    main .info p {
+        font-size: 25px;
+    }
+
+    main .recipe-information h2 {
+        font-size: 35px;
+    }
+
+    main .time {
+        font-size: 20px;
+    }
+
+    main .recipe-information h3 {
+        font-size: 25px;
+    }
+
+    main .recipe-information ul,
+    main .recipe-information ol {
+        font-size: 20px;
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    main .info p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    main h1 {
+        font-size: 35px;
+    }
+
+    main .info p {
+        font-size: 20px;
+    }
+
+    main .recipe-information h2 {
+        font-size: 25px;
+    }
+
+    main .time {
+        font-size: 20px;
+    }
+
+    main .recipe-information h3 {
+        font-size: 20px;
+    }
+
+    main .recipe-information ul,
+    main .recipe-information ol {
+        font-size: 18px;
+    }
 }
