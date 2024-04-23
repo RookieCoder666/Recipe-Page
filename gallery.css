@@ -1,0 +1,36 @@
+body{
+    background-color: #000;
+    color: #FAF5FF;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .image {
+    width: 500px; /* Adjust as needed */
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .image {
+      width: 100%;
+    }
+  }
+  
